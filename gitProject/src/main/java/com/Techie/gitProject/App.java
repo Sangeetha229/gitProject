@@ -19,7 +19,7 @@ public class App {
 	
     public static void main(String[] args) {
         System.out.println("Changes done by Developer2");
-        System.out.println("Hello World changed!");
+        System.out.println(" feature changes!");
     }
     //add a new method to calculate fibonacci series 
    
