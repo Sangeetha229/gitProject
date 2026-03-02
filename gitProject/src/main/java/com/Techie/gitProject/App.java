@@ -46,11 +46,36 @@ public class App {
         }
         System.out.println();
     }
-
+//add another fibonacci method that returns the nth Fibonacci number
+    /**
+	 * Return the nth Fibonacci number.
+	 * <p>
+	 * Contract: n >= 0. If n == 0 returns 0, if n == 1 returns 1. For n > 1 returns the sum of the two preceding numbers.
+	 *
+	 * @param n index of the Fibonacci number to return
+	 * @return the nth Fibonacci number
+	 */
+    public static int fibonacci1(int n) {
+		if (n < 0) {
+			throw new IllegalArgumentException("n must be >= 0");
+		}
+		if (n == 0) return 0;
+		if (n == 1) return 1;
+		int a = 0, b = 1;
+		for (int i = 2; i <= n; i++) {
+			int next = a + b;
+			a = b;
+			b = next;
+		}
+		return b;
+	}
+    
+    
     public static void main(String[] args) {
         System.out.println("Changes done by Developer2");
         System.out.println("Hello World changed!");
         // preserve previous behavior (prints a single value by default)
         fibonacci(1);
+        fibonacci1(3);
     }
 }
