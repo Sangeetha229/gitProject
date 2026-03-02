@@ -52,5 +52,6 @@ public class App {
         System.out.println("Hello World changed!");
         // preserve previous behavior (prints a single value by default)
         fibonacci(1);
+        fibonacci(10);
     }
 }
