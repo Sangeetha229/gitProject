@@ -33,8 +33,10 @@ public class App {
     }
 
     /**
-     * Print the Fibonacci sequence header and the first {@code n} values to System.out.
-     * This is a thin wrapper around {@link #fibonacciSequence(int)} kept for CLI compatibility.
+     * Print the Fibonacci sequence header and the first {@code n} values to
+     * System.out.
+     * This is a thin wrapper around {@link #fibonacciSequence(int)} kept for CLI
+     * compatibility.
      *
      * @param n number of Fibonacci numbers to print
      */
@@ -46,40 +48,42 @@ public class App {
         }
         System.out.println();
     }
-//add another fibonacci method that returns the nth Fibonacci number
+
+    // add another fibonacci method that returns the nth Fibonacci number
     /**
-	 * Return the nth Fibonacci number.
-	 * <p>
-	 * Contract: n >= 0. If n == 0 returns 0, if n == 1 returns 1. For n > 1 returns the sum of the two preceding numbers.
-	 *
-	 * @param n index of the Fibonacci number to return
-	 * @return the nth Fibonacci number
-	 */
+     * Return the nth Fibonacci number.
+     * <p>
+     * Contract: n >= 0. If n == 0 returns 0, if n == 1 returns 1. For n > 1 returns
+     * the sum of the two preceding numbers.
+     *
+     * @param n index of the Fibonacci number to return
+     * @return the nth Fibonacci number
+     */
     public static int fibonacci1(int n) {
-		if (n < 0) {
-			throw new IllegalArgumentException("n must be >= 0");
-		}
-		if (n == 0) return 0;
-		if (n == 1) return 1;
-		int a = 0, b = 1;
-		for (int i = 2; i <= n; i++) {
-			int next = a + b;
-			a = b;
-			b = next;
-		}
-		return b;
-	}
+        if (n < 0) {
+            throw new IllegalArgumentException("n must be >= 0");
+        }
+        if (n == 0)
+            return 0;
+        if (n == 1)
+            return 1;
+        int a = 0, b = 1;
+        for (int i = 2; i <= n; i++) {
+            int next = a + b;
+            a = b;
+            b = next;
+        }
+        return b;
+    }
 
     /**
      * Test-only helper to validate git secret-cleaning workflows.
      */
     public static void testGitCleaningSecrets() {
-        String apiKey = "DUMMY_API_KEY";
-        String password=*****"DUMMY_PASSWORD";
+
         System.out.println("Git cleaning test values loaded: " + apiKey + " / " + password);
     }
-    
-    
+
     public static void main(String[] args) {
         System.out.println("Changes done by Developer2");
         System.out.println("Hello World changed!");
