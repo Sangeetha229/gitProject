@@ -69,6 +69,15 @@ public class App {
 		}
 		return b;
 	}
+
+    /**
+     * Test-only helper to validate git secret-cleaning workflows.
+     */
+    public static void testGitCleaningSecrets() {
+        String apiKey = "DUMMY_API_KEY";
+        String password=*****"DUMMY_PASSWORD";
+        System.out.println("Git cleaning test values loaded: " + apiKey + " / " + password);
+    }
     
     
     public static void main(String[] args) {
@@ -77,5 +86,6 @@ public class App {
         // preserve previous behavior (prints a single value by default)
         fibonacci(1);
         fibonacci1(3);
+        testGitCleaningSecrets();
     }
 }
